@@ -6,9 +6,15 @@ use Hanafalah\ModuleAgent\{
 };
 
 return [
-    'contracts' => [
-        'agent'        => Contracts\Agent::class,
-        'module_agent' => Contracts\ModuleAgent::class
+    'app' => [
+        'contracts' => [
+            'agent'        => Contracts\Agent::class,
+            'module_agent' => Contracts\ModuleAgent::class
+        ],
+    ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts'
     ],
     'database' => [
         'models' => [
