@@ -13,21 +13,21 @@ class Agent extends Organization
     protected static function booted(): void
     {
         parent::booted();
-        static::addGlobalScope('agent', function ($query) {
-            $query->whereRaw('UPPER(flag) = "AGENT"');
+        static::addGlobalScope('flag', function ($query) {
+            $query->flagIn('Agent');
         });
         static::creating(function ($query) {
-            if (!isset($query->flag)) $query->flag = 'AGENT';
+            if (!isset($query->flag)) $query->flag = 'Agent';
         });
     }
 
-    public function toShowApi()
+    public function getShowResource()
     {
-        return new ShowAgent($this);
+        return ShowAgent::class;
     }
 
-    public function toViewApi()
+    public function getViewResource()
     {
-        return new ViewAgent($this);
+        return ViewAgent::class;
     }
 }
