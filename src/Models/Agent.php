@@ -17,8 +17,18 @@ class Agent extends Organization
             $query->flagIn('Agent');
         });
         static::creating(function ($query) {
-            if (!isset($query->flag)) $query->flag = 'Agent';
+            $query->flag = 'Agent';
         });
+    }
+
+    public function viewUsingRelation(): array
+    {
+        return [];
+    }
+
+    public function showUsingRelation(): array
+    {
+        return ['parent'];
     }
 
     public function getShowResource()
