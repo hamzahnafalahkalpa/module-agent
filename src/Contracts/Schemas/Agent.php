@@ -10,6 +10,7 @@ use Hanafalah\ModuleOrganization\Contracts\Schemas\Organization;
 
 /**
  * @see \Hanafalah\ModuleAgent\Schemas\Agent
+ * @method self setParamLogic(string $logic, bool $search_value = false, ?array $optionals = [])
  * @method self conditionals(mixed $conditionals)
  * @method bool deleteAgent()
  * @method bool prepareDeleteAgent(? array $attributes = null)
