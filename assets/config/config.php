@@ -8,8 +8,6 @@ use Hanafalah\ModuleAgent\{
 return [
     'app' => [
         'contracts' => [
-            'agent'        => Contracts\Agent::class,
-            'module_agent' => Contracts\ModuleAgent::class
         ],
     ],
     'libs' => [
@@ -18,7 +16,6 @@ return [
     ],
     'database' => [
         'models' => [
-            'Agent' => ModuleAgent\Agent::class,
         ]
     ],
 ];
