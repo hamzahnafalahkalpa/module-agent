@@ -10,7 +10,7 @@ use Hanafalah\ModuleAgent\Contracts;
 class Agent extends Organization implements Contracts\Schemas\Agent
 {
     protected string $__entity = 'Agent';
-    public static $agent_model;
+    public $agent_model;
 
     protected array $__cache = [
         'index' => [
