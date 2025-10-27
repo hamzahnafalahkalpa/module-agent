@@ -11,13 +11,6 @@
             "Hanafalah\\ModuleAgent\\": "src/"
         }
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Hanafalah\\ModuleAgent\\ModuleAgentServiceProvider"
-            ]
-        }
-    },
     "authors": [
         {
             "name": "Hamzah",
